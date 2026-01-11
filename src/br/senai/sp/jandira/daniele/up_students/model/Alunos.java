@@ -1,4 +1,4 @@
-package br.senai.sp.jandira.daniele.cadastro_alunos.model;
+package br.senai.sp.jandira.daniele.up_students.model;
 
 public class Alunos {
     public String nome;

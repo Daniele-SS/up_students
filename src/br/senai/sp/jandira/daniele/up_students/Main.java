@@ -1,6 +1,4 @@
-package br.senai.sp.jandira.daniele.cadastro_alunos;
-
-import br.senai.sp.jandira.daniele.cadastro_alunos.model.Alunos;
+package br.senai.sp.jandira.daniele.up_students;
 
 public class Main {
     public static void main(String[] args) {
