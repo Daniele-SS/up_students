@@ -52,3 +52,8 @@ body {
 .one h3 a:hover {
     color: #a0ffd4;
 }
+
+.objetivo {
+    display: flex;
+    justify-content: center;
+}
