@@ -35,3 +35,20 @@ body {
 .button:hover {
     transform: translateY(-8px);
 }
+
+.one ul {
+    display: flex;
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.one h3 a {
+    color: white;           
+    text-decoration: none;  
+}
+
+.one h3 a:hover {
+    color: #a0ffd4;
+}
