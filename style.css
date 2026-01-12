@@ -57,9 +57,17 @@ body {
     display: flex;
     justify-content: center;
     font-size: 48px;
+    color: white;
 }
 
 .text {
     display: flex;
     font-size: 32px;
+    color: white;
+}
+
+.green-rectangle {
+    display: flex;
+    background-color: rgba(0, 122, 84, 0.7);
+    flex-direction: column;
 }
