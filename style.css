@@ -17,11 +17,14 @@ body {
     height: 100px;
     width: 1500px;
     margin-bottom: 650px;
+    gap: 50px;
+    padding: 10px;
 }
 
 .button {
     background-color: #007A54;
-    display: flex;
+    display: inline-block;
+    align-items: center;
     color: white;
     font-size: 64px;
     border: none;
