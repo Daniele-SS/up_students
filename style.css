@@ -77,3 +77,19 @@ body {
     border-radius: 30px;
     max-width: 70%;
 }
+
+.information {
+    display: flex;
+    justify-content: center;
+    font-size: 48px;
+    color: white;
+    align-items: center;
+    flex-direction: column;
+    height: 40vh;
+}
+
+.information p {
+    font-size: 36px;
+    display: flex;
+    margin-top: 2px;  
+}
