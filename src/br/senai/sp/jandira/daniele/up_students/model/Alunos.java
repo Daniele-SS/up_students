@@ -16,4 +16,8 @@ public class Alunos {
         this.dataNascimento = dataNascimento;
     }
 
+    // Getters (Essenciais para o JavaFX mostrar os dados na tabela)
+    public String getNome() { return nome; }
+    public String getMatricula() { return matricula; }
+    public String getEmail() { return email; }
 }
