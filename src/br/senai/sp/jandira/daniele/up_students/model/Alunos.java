@@ -1,17 +1,19 @@
 package br.senai.sp.jandira.daniele.up_students.model;
 
 public class Alunos {
-    public String nome;
-    public String curso;
-    public String matricula;
-    public String email;
-    public String nota;
+    private String nome;
+    private String matricula;
+    private String email;
+    private String telefone;
+    private String dataNascimento;
 
-    public void exibirAluno () {
-        System.out.println("Nome: " + nome);
-        System.out.println("Curso de Ensino: " + curso);
-        System.out.println("Matrícula: " + matricula);
-        System.out.println("Email: " + email);
-        System.out.println("Nota final: " + nota);
+    // Construtor, Getters e Setters
+    public Alunos(String nome, String matricula, String email, String telefone, String dataNascimento) {
+        this.nome = nome;
+        this.matricula = matricula;
+        this.email = email;
+        this.telefone = telefone;
+        this.dataNascimento = dataNascimento;
     }
+
 }
