@@ -1,21 +1,28 @@
 body {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 0;
+    margin: 0;
     font-family: ADLaM Display;
 }
 
 .one {
     background-color: #007A54;
     display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
     font-size: 36px;
     height: 100px;
     width: 1500px;
+    margin-bottom: 650px;
+    gap: 50px;
+    padding: 10 0px;
 }
 
 .button {
     background-color: #007A54;
-    display: flex;
     color: white;
     font-size: 64px;
     border: none;
@@ -23,8 +30,70 @@ body {
     border-radius: 25px;
     cursor: pointer;
     transition: 0.3s ease;
+    display: block;          
+    margin: 50px auto;       
+    width: fit-content;
 }
 
 .button:hover {
     transform: translateY(-8px);
+}
+
+.one ul {
+    display: flex;
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.one h3 a {
+    color: white;           
+    text-decoration: none;  
+}
+
+.one h3 a:hover {
+    color: #a0ffd4;
+}
+
+.sobre {
+    display: flex;
+    justify-content: center;
+    font-size: 48px;
+    color: white;
+    align-items: center;
+    flex-direction: column;
+    height: 40vh;
+}
+
+.sobre p {
+    font-size: 36px; 
+    display: flex;
+    margin-top: 2px;   
+}
+
+.green-rectangle {
+    display: flex;
+    background-color: rgba(0, 122, 84, 0.7);
+    flex-direction: column;
+    padding: 100px;
+    margin: -500px;
+    border-radius: 30px;
+    max-width: 70%;
+}
+
+.information {
+    display: flex;
+    justify-content: center;
+    font-size: 48px;
+    color: white;
+    align-items: center;
+    flex-direction: column;
+    height: 40vh;
+}
+
+.information p {
+    font-size: 36px;
+    display: flex;
+    margin-top: 2px;  
 }
