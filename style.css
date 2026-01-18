@@ -76,7 +76,7 @@ body {
     display: flex;
     background-color: rgba(0, 122, 84, 0.7);
     flex-direction: column;
-    padding: 70px;
+    padding: 100px;
     margin: -500px;
     border-radius: 30px;
     max-width: 70%;
