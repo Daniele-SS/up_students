@@ -16,7 +16,7 @@ public class Main extends Application {
         // Tamanho do stage (tela)
         Scene scene = new Scene(telaCadastro.getLayout(), 900, 768);
 
-        primaryStage.setTitle("Sistema de Gestão de Alunos");
+        primaryStage.setTitle("UpStudents");
         primaryStage.setScene(scene);
         primaryStage.show();
         primaryStage.setResizable(false);
