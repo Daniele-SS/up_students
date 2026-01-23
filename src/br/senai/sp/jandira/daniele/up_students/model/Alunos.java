@@ -7,7 +7,6 @@ public class Alunos {
     private String telefone;
     private String dataNascimento;
 
-    // Construtor, Getters e Setters
     public Alunos(String nome, String matricula, String email, String telefone, String dataNascimento) {
         this.nome = nome;
         this.matricula = matricula;
@@ -20,4 +19,6 @@ public class Alunos {
     public String getNome() { return nome; }
     public String getMatricula() { return matricula; }
     public String getEmail() { return email; }
+    public String getDataNascimento() { return dataNascimento; }
+    public String getTelefone() { return telefone; }
 }

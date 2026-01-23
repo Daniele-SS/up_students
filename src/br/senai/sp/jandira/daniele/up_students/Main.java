@@ -14,11 +14,12 @@ public class Main extends Application {
 
         // Define a cena com o layout da CadastroUI
         // Tamanho do stage (tela)
-        Scene scene = new Scene(telaCadastro.getLayout(), 1000, 900);
+        Scene scene = new Scene(telaCadastro.getLayout(), 900, 768);
 
         primaryStage.setTitle("Sistema de Gestão de Alunos");
         primaryStage.setScene(scene);
         primaryStage.show();
+        primaryStage.setResizable(false);
     }
 
     public static void main(String[] args) {
