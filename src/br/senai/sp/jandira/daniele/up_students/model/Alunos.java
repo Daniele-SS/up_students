@@ -1,11 +1,7 @@
 package br.senai.sp.jandira.daniele.up_students.model;
 
 public class Alunos {
-    private String nome;
-    private String matricula;
-    private String email;
-    private String telefone;
-    private String dataNascimento;
+    private String nome, matricula, email, telefone, dataNascimento;
 
     public Alunos(String nome, String matricula, String email, String telefone, String dataNascimento) {
         this.nome = nome;
@@ -15,10 +11,9 @@ public class Alunos {
         this.dataNascimento = dataNascimento;
     }
 
-    // Getters (Essenciais para o JavaFX mostrar os dados na tabela)
     public String getNome() { return nome; }
     public String getMatricula() { return matricula; }
     public String getEmail() { return email; }
-    public String getDataNascimento() { return dataNascimento; }
     public String getTelefone() { return telefone; }
+    public String getDataNascimento() { return dataNascimento; }
 }

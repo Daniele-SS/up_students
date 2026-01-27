@@ -8,18 +8,12 @@ import br.senai.sp.jandira.daniele.up_students.ui.CadastroUI;
 public class Main extends Application {
 
     @Override
-    public void start(Stage primaryStage) {
-        // Instancia a sua classe de UI
-        CadastroUI telaCadastro = new CadastroUI();
-
-        // Define a cena com o layout da CadastroUI
-        // Tamanho do stage (tela)
-        Scene scene = new Scene(telaCadastro.getLayout(), 900, 768);
-
-        primaryStage.setTitle("UpStudents");
-        primaryStage.setScene(scene);
-        primaryStage.show();
-        primaryStage.setResizable(false);
+    public void start(Stage stage) {
+        Scene scene = new Scene(new CadastroUI().getLayout(), 900, 768);
+        stage.setTitle("UpStudents");
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
     }
 
     public static void main(String[] args) {

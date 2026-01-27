@@ -6,52 +6,37 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AlunosRepository {
-    private final String CAMINHO_PASTA = "src/database";
-    private final String ARQUIVO_CSV = CAMINHO_PASTA + "/alunos.csv";
+    private final String ARQUIVO_CSV = "src/database/alunos.csv";
 
     public boolean salvar(Alunos aluno) {
-        File pasta = new File(CAMINHO_PASTA);
-        if (!pasta.exists()) {
-            pasta.mkdirs();
-        }
+        new File("src/database").mkdirs();
 
-        // VERIFICAÇÃO DE DUPLICIDADE: Lê todos e compara a matrícula
-        List<Alunos> existentes = buscarTodos();
-        for (Alunos a : existentes) {
-            if (a.getMatricula().equalsIgnoreCase(aluno.getMatricula())) {
-                return false; // Retorna falso e não salva se a matrícula já existir
-            }
-        }
+        // Impede duplicata
+        if (buscarTodos().stream().anyMatch(a -> a.getMatricula().equals(aluno.getMatricula())))
+            return false;
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(ARQUIVO_CSV, true))) {
-            String linha = String.format("%s;%s;%s;%s;%s",
-                    aluno.getNome(), aluno.getMatricula(), aluno.getEmail(),
-                    aluno.getTelefone(), aluno.getDataNascimento());
-            writer.write(linha);
+            writer.write(String.join(";", aluno.getNome(), aluno.getMatricula(),
+                    aluno.getEmail(), aluno.getTelefone(), aluno.getDataNascimento()));
             writer.newLine();
-            return true; // Salvo com sucesso
+            return true;
         } catch (IOException e) {
-            e.printStackTrace();
             return false;
         }
     }
 
     public List<Alunos> buscarTodos() {
         List<Alunos> lista = new ArrayList<>();
-        File arquivo = new File(ARQUIVO_CSV);
-        if (!arquivo.exists()) return lista;
+        File file = new File(ARQUIVO_CSV);
+        if (!file.exists()) return lista;
 
-        try (BufferedReader reader = new BufferedReader(new FileReader(ARQUIVO_CSV))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
             String linha;
             while ((linha = reader.readLine()) != null) {
-                String[] dados = linha.split(";");
-                if (dados.length == 5) {
-                    lista.add(new Alunos(dados[0], dados[1], dados[2], dados[3], dados[4]));
-                }
+                String[] d = linha.split(";");
+                if (d.length == 5) lista.add(new Alunos(d[0], d[1], d[2], d[3], d[4]));
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        } catch (IOException e) { e.printStackTrace(); }
         return lista;
     }
 }

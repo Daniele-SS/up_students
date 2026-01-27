@@ -102,6 +102,7 @@ public class CadastroUI {
 
         HBox formulario = new HBox(10, txtNome, txtMat, txtEmail, txtTel, txtData, btnSalvar);
         formulario.setAlignment(Pos.CENTER);
+
         // HGrow apenas nos campos de texto para não esmagar o botão
         HBox.setHgrow(txtNome, Priority.ALWAYS); HBox.setHgrow(txtMat, Priority.ALWAYS);
 
@@ -111,7 +112,7 @@ public class CadastroUI {
         return layoutPrincipal;
     }
 
-    // MÉTODO AUXILIAR PARA EXIBIR MENSAGENS (Alertas na Stage)
+    //(Alertas na Stage)
     private void exibirMensagem(String titulo, String cabecalho, String conteudo, Alert.AlertType tipo) {
         Alert alerta = new Alert(tipo);
         alerta.setTitle(titulo);
