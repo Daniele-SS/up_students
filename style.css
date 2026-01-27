@@ -97,3 +97,12 @@ body {
     display: flex;
     margin-top: 2px;  
 }
+
+.software {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid black;
+    width: 1500px;
+     
+}
