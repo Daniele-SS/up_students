@@ -16,7 +16,7 @@ body {
     font-size: 36px;
     height: 100px;
     width: 1500px;
-    margin-bottom: 650px;
+    margin-bottom: 600px;
     gap: 50px;
     padding: 10 0px;
 }
@@ -100,9 +100,8 @@ body {
 
 .software {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
     border: 5px solid black;
-    width: 1500px;
-     
+    max-width: 1500px;
+    height: auto;
 }
